@@ -64,6 +64,9 @@ def main():
 	smallest_values = heapq.nsmallest(top_k, vector_r_prev)
 	smallest_indexes = heapq.nsmallest(top_k, range(number_of_nodes), vector_r_prev.__getitem__)
 
+	largest_indexes = [val+1 for val in largest_indexes]
+	smallest_indexes = [val+1 for val in smallest_indexes]
+
 	print("Value of largest n nodes\n", largest_values)
 	print("Node numbers of largest n nodes\n", largest_indexes)
 	print("Value of smallest n nodes\n", smallest_values)
